@@ -11,3 +11,4 @@ class OrderAdmin(admin.ModelAdmin):
     inlines=[OrderItemInline]
     fields=['user','status','shipping_adress']
 
+#testing
