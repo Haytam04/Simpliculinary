@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Produits
+{% endblock  %}
+
+
+{% block content %}
+    
+<div class="container mt-5">
+    
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-active">
+                <th>Nom</th>
+                <th>Marque</th>
+                <th>Categorie</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.brand}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.countInStock}}</td>
+                </tr>
+            {% endfor %}
+                
+        </tbody>
+    </table>
+</div>
+{% endblock  %}
